@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        String product;
+        double price;
+        int quantity;
+
+        System.out.print("What Item would you like to buy? ");
+        product = input.nextLine();
+        System.out.print("What is the price for each: ");
+        price = input.nextDouble();
+        System.out.print("How many would you like: ");
+        quantity = input.nextInt();
+
+
+        quantity *= price;
+
+        System.out.println("You have bought " + quantity + " " + product);
+        System.out.println("Your total is " + quantity);
+
+    }
+}
