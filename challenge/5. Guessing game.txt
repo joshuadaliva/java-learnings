@@ -1,0 +1,33 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+
+        int guess = 0;
+        int attempts = 0;
+        int randomNumber =0;
+        
+        System.out.println("Number guessing game");
+        System.out.println("Guess a number between 1-10: ");
+        
+        do{
+            randomNumber = random.nextInt(1,11);
+            System.out.print("Enter a guess: ");
+            guess = scanner.nextInt();
+            System.out.println("random no. is " + randomNumber);
+            attempts++;
+
+
+        }while(guess != randomNumber);
+
+        System.out.println("you have won");
+
+        scanner.close();
+    }
+}
